@@ -1,0 +1,25 @@
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+
+#root{
+    border:20px solid blue;
+}
+
+
+#root > header{ border:2px solid black;}
+
+
+main{ border:2px solid black; }
+
+
+#root > footer{ border:2px solid black;}
+
+
+/* components */
+
+.logo{
+
+}
