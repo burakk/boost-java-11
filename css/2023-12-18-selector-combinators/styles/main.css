@@ -35,3 +35,11 @@ footer{
 footer p{
     color:pink;
 }
+
+
+/* --- , as a combinator */
+
+/* a ve p ve h1 ve div ve span */
+a, p, h1, div, span{       }
+
+header p, header p a{ }
