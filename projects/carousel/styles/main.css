@@ -19,11 +19,13 @@ h2{
 
 
 .Carousel{
-    border:2px solid red;
-    width:300px;
-    height:200px;
+    border:10px solid red;
+    width:50vw;
+    height:50vh;
     margin:20px;
-    
+    position:relative;
+
+    overflow:hidden;
 }
 
 
@@ -32,9 +34,7 @@ h2{
     width:200%;
     height:100%;
     display:flex;
-
-    
-   
+    margin-left:-0%
 }
 
 .Carousel > ul > li{
@@ -55,8 +55,46 @@ h2{
 
 
 .Carousel > ul > li:nth-child(2){
-    background-image: url("../images/vincent-van-gogh-sunflowers-e1594341018936.jpg.webp");
+    background-image: url("../images/P11365_10.jpg");
     background-size: cover;
     background-position: center;
-    
+}
+
+.Carousel .btn-directional{
+    position:absolute;
+    height:100%;
+    background-color:rgba(0,0,0,0.35);
+    color:white;
+    font-size:1.2rem;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.Carousel .btn-directional-prev{
+    top:0;
+    left:0;
+}
+
+
+.Carousel .btn-directional-next{
+    top:0;
+    right:0;
+}
+
+.Carousel .nav-bullets{
+    position:absolute;
+    bottom:24px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.Carousel .nav-bullets button{
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    border:none;
+    background-color:black;
+    cursor:pointer;
+    border:2px solid white;
 }
