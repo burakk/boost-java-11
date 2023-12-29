@@ -43,6 +43,46 @@ const basketMessage = (basketAmount, tax) => {
   return basketAmount + basketAmount * tax;
 };
 
+
+const myMaximalArrowFunc = (p1)=>{ 
+  //statement1
+  //statement2
+  return p1 * 2;
+ }
+
+const myMinimalArrowFunc1 =  p1 =>{ return p1 * 2 }; 
+
+const myMinimalArrowFunc2 =  p1 => p1 * 2; 
+
+
+
+const double = n=>n *2;
+
+
+const greeting = (lastName, firstName)=>`Merhaba ${lastName} ${firstName}`;
+
+
+const greeting2 = (lastName, firstName)=>{
+
+  //statement1
+  //statement2
+  return `Merhaba ${lastName} ${firstName}`;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 console.log(basketMessage(1000, 0.36));
 
 console.log(basketMessage(1300));
