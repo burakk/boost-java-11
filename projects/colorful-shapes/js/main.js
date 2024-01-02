@@ -11,16 +11,18 @@ let counter = 0;
 btnCreateShapesEl.addEventListener("click", handleCreateShapes);
 
 function handleCreateShapes() {
-  const stageElChildren = stageEl.children;
-
-  for (let i = 0; i < stageElChildren.length; i++) {
-    stageElChildren[i].remove();
-  }
-
   if (timerRef) {
+    counter = 0;
     clearInterval(timerRef);
   }
-  timerRef = setInterval(createShape, 100);
+  const stageElChildren = stageEl.childNodes;
+
+  while (stageElChildren[0]) {
+    stageElChildren[0].remove();
+  }
+
+  console.log(stageEl.children);
+  timerRef = setInterval(createShape, 1000);
 }
 
 /* function createShapes() {} */
