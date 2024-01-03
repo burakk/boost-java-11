@@ -87,3 +87,25 @@ function addNewUser(userData) {
 }
 
 //PUT  updateUser
+function updateUser(userId, userData) {
+  const fetchOptions = {
+    method: "PUT",
+    headers: { "Content-type": "Application/json" },
+    body: JSON.stringify(userData),
+  };
+
+  return fetch(`${API_BASE_URL}/Users/${userId}}`, fetchOptions)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Sunucu hatası ");
+      }
+
+      return response.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
