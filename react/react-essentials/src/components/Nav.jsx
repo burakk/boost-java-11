@@ -15,11 +15,14 @@ export function Nav() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/02">
+                    <Link to="/03">
                         bir komponente özellik - prop geçirmek
                     </Link>
-
-
+                </li>
+                <li>
+                    <Link to="/04">
+                        koşullu render etmek - conditional rendering
+                    </Link>
                 </li>
             </ul>
 

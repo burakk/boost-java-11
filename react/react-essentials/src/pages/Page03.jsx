@@ -47,6 +47,18 @@ export function Page03() {
 
                 <img className="avatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/440px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg" />
             </ModalBox>
+
+
+            <h2>Forwarding props</h2>
+
+            <p>Bir komponent hiyerarşisinde prop'ların daha derindeki komponentler geçirilmesi</p>
+
+
+            <Toolbar size="sm" theme="light" mediaId={12} mediaList={[]} isExpandable={true} />
+            <Toolbar3 size="sm" theme="light" mediaId={12} mediaList={[]} isExpandable={true} />
+
+
+
         </section>
     )
 }
@@ -230,6 +242,55 @@ function ModalBox2({ title, children }) {
     )
 }
 
+
+
+/* *** Forwarding Props  !!!!!!!! *** */
+
+
+//  <Toolbar size="sm" theme="light" mediaId={12} mediaList={[]} isExpandable={true}/>
+function Toolbar({ size, theme, mediaId, mediaList, isExpandable }) {
+    return (
+        <div style={{ border: "4px solid red" }}>
+            I am the toolbar
+            <VideoPlayer size={size} theme={theme} mediaId={mediaId} mediaList={mediaList} isExpandable={isExpandable} />
+        </div>
+    )
+}
+
+
+function Toolbar2(props) {
+
+    return (
+        <div style={{ border: "4px solid red" }}>
+            I am the toolbar
+            <VideoPlayer size={props.size} theme={props.theme} mediaId={props.mediaId} mediaList={props.mediaList} isExpandable={props.isExpandable} />
+        </div>
+    )
+}
+
+// ***  passing all props via spread operator ***
+function Toolbar3(props) {
+    
+    return (
+        <div style={{ border: "4px solid red" }}>
+            I am the toolbar
+            <VideoPlayer  {...props} />
+        </div>
+    )
+}
+
+
+
+function VideoPlayer({ size, theme, mediaId, mediaList, isExpandable }) {
+
+    console.log(size, theme, mediaId, mediaList, isExpandable);
+
+    return (
+        <div style={{ border: "1px solid blue" }}>
+            I am the video player
+        </div>
+    )
+}
 
 
 
