@@ -248,6 +248,25 @@ function CardList4() {
 }
 
 
+/* ***** CardList5 ***** */
+//passing props via spread syntax. Data Obje keyleri ve componentin beklediği prop isimleri aynı olduğunda propları spread poperator ile gönderebilirsiniz...
+function CardList5() {
+    return (
+        <>
+            <ul>Ürün item komponenti kullanan ürün listesi</ul>
+
+            {
+                DATA_PRODUCTS.map((productObj) => {
+                   
+                    return <ProductItem {...productObj }/>
+
+                })
+            }
+        </>
+    )
+}
+
+
 
 // <ProductItem  title="Laptop" price="12000" description="lorem lorem" count="3" />
 

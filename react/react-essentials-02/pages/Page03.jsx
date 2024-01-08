@@ -1,7 +1,7 @@
-export function Page02() {
+export function Page03() {
     return (
         <section>
-            <h2>Listelerdeki jsx elemanlarına unique key prop'ları eklemek</h2>
+            <h2>Komponentlerin pür-saf-arı-duru olması - Keeping components pure.</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, assumenda.
             </p>
 

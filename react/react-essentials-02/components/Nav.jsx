@@ -12,6 +12,11 @@ export function Nav() {
                 </li>
                 <li>
                     <Link to="/02">
+                        Listelerdeki jsx elemanlarına unique key prop'ları eklemek
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/03">
                         Komponentlerin pür-saf olması 
                     </Link>
                 </li>
