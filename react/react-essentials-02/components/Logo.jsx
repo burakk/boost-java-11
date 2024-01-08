@@ -1,10 +1,10 @@
 import { IconBolt } from "./Icons"
 
-export function Logo(){
-    return(
-        <a href="#">
-            <IconBolt color="red"/>
-            Java-11
+export function Logo() {
+    return (
+        <a href="#" className="logo">
+            <IconBolt color="red" width="28" height="32" />
+            Java-11 <strong>React</strong>
         </a>
     )
 
