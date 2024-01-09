@@ -15,6 +15,7 @@ export const DATA_PRODUCTS = [
     price: 34000,
     count: 5,
     description: "lorem lorem lorem",
+    category: "electronics",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ export const DATA_PRODUCTS = [
     price: 34000,
     count: 2,
     description: "lorem lorem lorem",
+    category: "electronics",
   },
   {
     id: 4,
@@ -29,6 +31,7 @@ export const DATA_PRODUCTS = [
     price: 44000,
     count: 5,
     description: "lorem lorem lorem",
+    category: "electronics",
   },
   {
     id: 12,
@@ -36,6 +39,7 @@ export const DATA_PRODUCTS = [
     price: 32000,
     count: 15,
     description: "lorem lorem lorem",
+    category: "electronics",
   },
   {
     id: 24,
@@ -43,5 +47,22 @@ export const DATA_PRODUCTS = [
     price: 24000,
     count: 3,
     description: "lorem lorem lorem",
+    category: "electronics",
+  },
+  {
+    id: 240,
+    title: "Polo T-shirt",
+    price: 750,
+    count: 3,
+    description: "lorem lorem lorem",
+    category: "textile",
+  },
+  {
+    id: 223,
+    title: "Mavi Jeans Pantolon",
+    price: 1200,
+    count: 3,
+    description: "lorem lorem lorem",
+    category: "textile",
   },
 ];

@@ -1,4 +1,3 @@
-import { IconBolt } from "./Icons"
 import { Link } from "./Link"
 
 export function Nav() {
@@ -18,6 +17,11 @@ export function Nav() {
                 <li>
                     <Link to="/03">
                         Komponentlerin pür-saf olması 
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/04">
+                        Interaktivite 
                     </Link>
                 </li>
             </ul>

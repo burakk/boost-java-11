@@ -11,7 +11,8 @@
 
 
 import { createRoot } from "react-dom/client";
-import  MyApp  from "./App";
+import { StrictMode } from "react"
+import MyApp from "./App";
 
 
 import './assets/styles/reset.css';
@@ -21,9 +22,29 @@ const rootEl = document.getElementById("root");
 
 
 
-const root = createRoot( rootEl );
+const root = createRoot(rootEl);
 
-root.render( <MyApp/> );
+root.render(
+
+    <StrictMode>
+        <MyApp />
+    </StrictMode>
+
+
+);
+
+
+
+
+/*
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+     <React.StrictMode>
+     <App />
+   </React.StrictMode>,
+ )
+
+ */
 
 
 

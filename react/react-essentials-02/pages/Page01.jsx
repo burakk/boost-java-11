@@ -67,6 +67,9 @@ export function Page01() {
             <CardList />
             <CardList2 />
             <CardList3 />
+
+
+            <FilteredProductList />
         </section>
     );
 }
@@ -257,8 +260,8 @@ function CardList5() {
 
             {
                 DATA_PRODUCTS.map((productObj) => {
-                   
-                    return <ProductItem {...productObj }/>
+
+                    return <ProductItem {...productObj} />
 
                 })
             }
@@ -282,5 +285,64 @@ function ProductItem({ title, price, description, count }) {
             <p>{description}</p>
             <p>Stok adedi:{count}</p>
         </li>
+    )
+}
+
+
+function FilteredProductList() {
+    // [  <ProductItem title="Polo T-shirt" /> , <ProductItem title="Mavi Jeans Pantolon" /> ]
+    const filteredProductsList = DATA_PRODUCTS.filter((product) => product.category == "textile");
+
+    const filteredProductJsxList = filteredProductsList.map((product) => <ProductItem {...product} />)
+
+    return (
+
+        <>
+            <h2>Tekstil Kategorisindeki Ürünler</h2>
+
+            {filteredProductJsxList}
+        </>
+
+    )
+}
+
+
+function FilteredProductList2() {
+    // [  <ProductItem title="Polo T-shirt" /> , <ProductItem title="Mavi Jeans Pantolon" /> ]
+    /* chainig filter and map */
+    const filteredProductJsxList = DATA_PRODUCTS
+        .filter((product) => product.category == "textile")
+        .map((product) => <ProductItem {...product} />);
+
+
+
+    return (
+
+        <>
+            <h2>Tekstil Kategorisindeki Ürünler</h2>
+
+            {filteredProductJsxList}
+        </>
+
+    )
+}
+
+
+function FilteredProductList3() {
+
+
+    return (
+
+        <>
+            <h2>Tekstil Kategorisindeki Ürünler</h2>
+
+            {
+                DATA_PRODUCTS
+                    .filter((product) => product.category == "textile")
+                    .map((product) => <ProductItem {...product} />)
+
+            }
+        </>
+
     )
 }
