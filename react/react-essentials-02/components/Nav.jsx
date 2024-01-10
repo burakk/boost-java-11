@@ -16,12 +16,17 @@ export function Nav() {
                 </li>
                 <li>
                     <Link to="/03">
-                        Komponentlerin pür-saf olması 
+                        Komponentlerin pür-saf olması
                     </Link>
                 </li>
                 <li>
                     <Link to="/04">
-                        Interaktivite 
+                        Interaktivite
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/05">
+                        Interaktivite - Event propagation
                     </Link>
                 </li>
             </ul>

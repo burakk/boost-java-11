@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+img{
+  max-width:100%;
+}
+
+:root {
+  --clr-primary: blue;
+}
+
+
+#root > header{
+  background-color:#ccc;
+  padding:24px;
+}
+
+
+main{
+ padding:48px 0 64px;
+}
+
+#root > footer{
+  background-color:#ccc;
+  padding:24px;
+}

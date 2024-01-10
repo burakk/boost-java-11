@@ -5,11 +5,14 @@ import { Page01 } from "../pages/Page01";
 import { Page02 } from "../pages/Page02";
 import { Page03 } from "../pages/Page03";
 import { Page04 } from "../pages/Page04";
+import { Page05 } from "../pages/Page05";
 
 
 export default function MyApp() {
 
-  const currentPath = "/04";
+  console.log("Ben app komponenti, render ediliyorum");
+
+  const currentPath = "/05";
 
   return (
     <>
@@ -23,6 +26,8 @@ export default function MyApp() {
         {currentPath === "/03" && <Page03 />}
 
         {currentPath === "/04" && <Page04 />}
+
+        {currentPath === "/05" && <Page05 />}
       </main>
       <footer>F</footer>
     </>
