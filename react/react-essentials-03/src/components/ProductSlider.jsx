@@ -6,6 +6,7 @@ import { DATA_PRODUCTS } from "../data";
 
 export function ProductSlider() {
     const [index, setIndex] = useState(0);
+    const [showDetail, setShowDetail] = useState(false);
     // const [isLastSlide, setIsLastSlide ] = useState(false); DO NOT!!!
 
     const isFirstSlide = index === 0;
@@ -16,15 +17,21 @@ export function ProductSlider() {
         if (!isFirstSlide) {
             setIndex(index - 1);
         }
-
     }
 
     function handleNext() {
-
         if (isLastSlide) return;
-
         setIndex(index + 1); // rerender
+    }
 
+    function handleShowDetail() {
+        /*
+        if (showDetail == false) {
+            setShowDetail(true);
+        } else {
+            setShowDetail(false);
+        }*/
+        setShowDetail(!showDetail);
     }
 
     return (
@@ -38,7 +45,8 @@ export function ProductSlider() {
                     <figcaption></figcaption>
                 </figure>
                 <h3>{DATA_PRODUCTS[index].title}</h3>
-                <p>{DATA_PRODUCTS[index].excerpt}</p>
+                <p> {showDetail ? DATA_PRODUCTS[index].description : DATA_PRODUCTS[index].excerpt}</p>
+                <button type="button" onClick={handleShowDetail}>{showDetail ? "Detay sakla" : "Detay göster"}</button>
             </div>
         </div>
     )
@@ -50,8 +58,6 @@ export function ProductSliderV2() {
     const [index, setIndex] = useState(0);
 
     //DATA_PRODUCTS[0]
-
-
 
     return (
         <div className={styles.ProductSlider}>

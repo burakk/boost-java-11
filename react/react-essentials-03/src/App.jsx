@@ -22,8 +22,6 @@ const [ currentPath, setCurrentPath ] = useState("/01");
         {currentPath === "/02" && <Page02 />}
         {currentPath === "/03" && <Page03 />}
 
-
-
       </main>
       <footer><p>Her hakkı saklıdır @ 2024 java-11 </p> </footer>
     </>
