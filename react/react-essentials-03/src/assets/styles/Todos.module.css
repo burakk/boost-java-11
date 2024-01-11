@@ -3,7 +3,7 @@
   padding: 24px;
 }
 
-.Todos form {
+.Todos > form {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
@@ -11,12 +11,12 @@
   padding: 16px;
 }
 
-.Todos input {
+.Todos > form > input {
   padding: 8px;
   font-size: 1rem;
 }
 
-.Todos button[type="submit"] {
+.Todos > form > button[type="submit"] {
   background-color: orangered;
   color: white;
   height: 40px;

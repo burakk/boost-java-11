@@ -16,6 +16,26 @@ export function Todos() {
         setTodosData(filteredTodosData);
     }
 
+    function updateTodo(id, newContent) {
+
+        console.log(id, newContent)
+        const modifiedTodosData = todosData.map(todo => {
+
+            if (todo.id == id) {
+
+                return { ...todo, content: newContent }
+
+            }
+
+            return todo
+
+
+        });
+
+        setTodosData(modifiedTodosData);
+
+    }
+
     return (
         <div className={styles.Todos}>
             <h1>Yapılacaklar Listesi Komponenti</h1>
@@ -23,7 +43,7 @@ export function Todos() {
             <FormAddTodo addTodo={addTodo} />
             <ul>
                 {todosData.map(
-                    todo => <TodoItem content={todo.content} id={todo.id} deleteTodo={deleteTodo} />
+                    todo => <TodoItem content={todo.content} id={todo.id} deleteTodo={deleteTodo} updateTodo={updateTodo} />
                 )}
             </ul>
         </div>
@@ -50,30 +70,45 @@ function FormAddTodo({ addTodo }) {
 }
 
 
-function TodoItem({ content, id, deleteTodo }) {
+function TodoItem({ content, id, deleteTodo, updateTodo }) {
+
+    const [isEditing, setIsEditing] = useState(false);
+    const [newContent, setNewContent] = useState("");
 
     const viewTemplate = (
         <li>
             {content}
-            <button onClick={handleClick}>Sil</button>
-            <button>Düzenle</button>
+            <button onClick={handleDeleteTodo}>Sil</button>
+            <button onClick={() => { setIsEditing(true) }}>Düzenle</button>
         </li>
     );
 
     const editTemplate = (
         <li>
-            <form>
-                <input type="text" value={""} />
+            <form onSubmit={handleUpdateTodo}>
+                <input type="text" value={newContent} onChange={
+                    (e) => { setNewContent(e.target.value) }
+                } />
                 <button type="submit">Kaydet</button>
+                <button type="button" onClick={() => { setIsEditing(false) }}>Kapat</button>
             </form>
         </li>
     );
 
+    function handleUpdateTodo(e) {
+        e.preventDefault();
+        updateTodo(id, newContent);
+        setIsEditing(false);
+    }
 
 
-
-    function handleClick() {
+    function handleDeleteTodo() {
         deleteTodo(id);
+    }
+
+    if (isEditing) {
+
+        return editTemplate;
     }
 
     return (
