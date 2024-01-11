@@ -35,3 +35,12 @@ export const DATA_PRODUCTS = [
     stockCount: 2,
   },
 ];
+
+
+export const DATA_TODOS = [
+  {id:0, content:"30 dakika spor yap", isCompleted:false},
+  {id:1, content:"Java çalış", isCompleted:false},
+  {id:2, content:"ML öğren", isCompleted:false},
+
+
+]

@@ -170,8 +170,8 @@ function FormUser2() {
     function handleEmailChange(e) {
         const newUser = { ...user, email: e.target.value };
         setUser(newUser);
-
     }
+    
     return (
         <>
             <h2>Kullanıcı formu 2</h2>
