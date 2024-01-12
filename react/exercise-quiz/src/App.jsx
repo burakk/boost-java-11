@@ -46,7 +46,8 @@ function App() {
       <p>Türkiye'nin başkenti hangi şehirdir?</p>
       <form onSubmit={handleSubmit}>
         <textarea value={userAnswer} name="userAnswer" id="userAnswer" onChange={handleUserAnswerChange}></textarea>
-        <button type="submit">Gönder</button>
+        <button type="submit" disabled={userAnswer.length < 4 || status === "submitting" ? true : false}>Gönder</button>
+        {status === "error" && <p>Yanlış cevap tekrar deneyiniz</p>}
       </form>
 
       {status === "submitting" && <p>Cavabınız kontrol ediliyor...</p>}
