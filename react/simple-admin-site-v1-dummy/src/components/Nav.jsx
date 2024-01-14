@@ -6,12 +6,12 @@ export function Nav() {
         <nav>
             <ul>
                 <li>
-                    <Link to="/">
+                    <Link to="/admin">
                         Anasayfa
                     </Link>
                 </li>
                 <li>
-                    <Link to="/ürünler">
+                    <Link to="/admin/ürünler">
                         Ürünler
                     </Link>
                 </li>
